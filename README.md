@@ -17,6 +17,7 @@
 
 
 These dotfiles might work out of a box on Manjaro i3 community edition
+Also this like my home folder so everything I have here is in my home folder
 
 
 ## Programs I use
