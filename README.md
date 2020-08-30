@@ -8,6 +8,8 @@
 
 ![img](https://i.imgur.com/DnhAHJb.png)
 
+![img](https://i.imgur.com/vqA6Ssy.png)
+
 ![img](https://i.imgur.com/WHGVne3.jpg)
 
 ![img](https://i.imgur.com/jIdrvrG.png)
@@ -26,9 +28,10 @@ Also this is like my home folder so everything I have here is in my home folder
 and a lot of others... you can see them in i3 config tho
 
 
-## Theme for Visual Studio
+## VS Code and IntelliJ themes
 
-[Here](https://marketplace.visualstudio.com/items?itemName=viktorqvarfordt.vscode-pitch-black-theme)
+[VS Code](https://marketplace.visualstudio.com/items?itemName=viktorqvarfordt.vscode-pitch-black-theme)
+[IntelliJ Idea](https://plugins.jetbrains.com/plugin/14059-darcula-pitch-black)
 
 
 ## Some additional install steps
