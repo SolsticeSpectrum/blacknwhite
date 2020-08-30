@@ -13,6 +13,9 @@
 ![img](https://i.imgur.com/jIdrvrG.png)
 
 
+## Use BetterDiscord and Spicetify at your own risk, these are violations of their terms of services
+
+
 These dotfiles might work out of a box on Manjaro i3 community edition
 
 
@@ -40,4 +43,7 @@ You have to get the files from [this repo](https://github.com/phocus) as I only 
 3. Read through the config files, because something might be different for you
 4. Make sure you have fonts Inconsolata, Dejavu Sans Mono, TerminessTTF Mono
 
-## I will post my website on different repo later
+
+## My website repo
+
+[Here](https://github.com/DarkReaper231/webdevprojects)
