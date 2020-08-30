@@ -1,0 +1,32 @@
+button {
+  transition: background-color 100ms ease-in;
+  background: transparentize(white, 0.95);
+  padding: 8px;
+  border-radius: 10px;
+
+  &:hover:not(:active) { background: transparentize(white, 0.9); }
+  &:disabled { opacity: 0.3; }
+
+  &:checked, &.suggested-action {
+    background: $accent-7;
+    color: lighten($accent-7, 40%);
+    &:hover:not(:active) { background: darken($accent-7, 5%); }
+  }
+
+  &.destructive-action {
+    background: $accent-1;
+    color: lighten($accent-1, 40%);
+    &:hover:not(:active) { background: darken($accent-1, 5%); }
+  }
+
+  &.circular {
+    border-radius: 100%;
+    padding: 8px;
+  }
+
+  &.flat {
+    background: transparent;
+    &:hover { color: rgba(255,255,255,.7); }
+    &:checked { color: rgba(255,255,255,.8); }
+  }
+}

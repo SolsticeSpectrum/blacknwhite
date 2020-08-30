@@ -1,0 +1,14 @@
+textview {
+  transition: background 100ms ease-in-out;
+
+  background: #252527;
+  padding: 8px;
+
+  &:focus {
+    background: #3e3e42;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}

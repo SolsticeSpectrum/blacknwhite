@@ -1,0 +1,52 @@
+headerbar {
+  background: $background-2;
+  padding: 6px;
+
+  box.horizontal {
+    &.right > button.titlebutton:last-child {
+      margin-right: -6px;
+    }
+
+    &.left > button.titlebutton:first-child {
+      margin-left: -6px;
+    }
+  }
+
+  button.titlebutton:not(.appmenu) {
+    background: transparent;
+    min-height: auto;
+    margin: -6px 0;
+    height: auto;
+    padding: 15px 10px;
+    border-radius: 0;
+
+    &:nth-last-child(-n+2) {
+      margin-left: -6px;
+    }
+
+    $titlebutton_to_color: (
+      minimize: $accent-9,
+      maximize: $accent-9,
+      close: $accent-9
+    );
+
+    @each $type, $color in $titlebutton_to_color {
+      &.#{$type} {
+        color: $color;
+        &:hover {
+          background-color: $color;
+        }
+      }
+    }
+
+    &:hover {
+      color: rgb(0,0,0);
+    }
+  }
+
+  button.titlebutton.appmenu {
+    &:not(:active):not(:checked) {
+      background: transparent;
+    }
+  }
+}
