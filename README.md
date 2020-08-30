@@ -30,7 +30,7 @@ and a lot of others... you can see them in i3 config tho
 
 ## VS Code and IntelliJ themes
 
-[VS Code](https://marketplace.visualstudio.com/items?itemName=viktorqvarfordt.vscode-pitch-black-theme)
+[VS Code](https://marketplace.visualstudio.com/items?itemName=viktorqvarfordt.vscode-pitch-black-theme)  
 [IntelliJ Idea](https://plugins.jetbrains.com/plugin/14059-darcula-pitch-black)
 
 
