@@ -16,13 +16,13 @@
 ## Use BetterDiscord and Spicetify at your own risk, these are violations of their terms of services
 
 
-These dotfiles might work out of a box on Manjaro i3 community edition
-Also this like my home folder so everything I have here is in my home folder
+These dotfiles might work out of a box on Manjaro i3 community edition.
+Also this is like my home folder so everything I have here is in my home folder
 
 
 ## Programs I use
 
-```BetterDiscord, Spicetify, Xcursor, Nautilus, cava, rofi, Polybar, i3-gaps, i3-scrot, picom-ibhagwan-git, neofetch, code-oss, gtk-3.0```
+```BetterDiscord, Spicetify, Xcursor, Nautilus, cava, rofi, Polybar, i3-gaps, i3-scrot, picom-ibhagwan-git, neofetch, code-oss, gtk-3.0, eye of gnome```
 and a lot of others... you can see them in i3 config tho
 
 
