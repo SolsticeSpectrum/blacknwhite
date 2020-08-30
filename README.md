@@ -34,7 +34,7 @@ and a lot of others... you can see them in i3 config tho
 ## Some additional install steps
 
 If you want the Nautilus theme to be running you will have to build it on your own from folder themes/phocus.
-You have to get the files from [this repo](https://github.com/phocus) as I only provided modified build files in this repo
+You have to get the files from [this repo](https://github.com/DarkReaper231/phocus) as I only provided modified build files in this repo. It is a fork as the creator will be doing some edits that will get rid of this black theme.
 
 
 ## Steps you should do after installing
