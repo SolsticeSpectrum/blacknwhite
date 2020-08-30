@@ -4,7 +4,7 @@
 
 ![img](https://i.imgur.com/YHQAaUU.png)
 
-![img](https://i.imgur.com/yHcEBvF.png)
+![img](https://i.imgur.com/rrEkaPo.png)
 
 ![img](https://i.imgur.com/DnhAHJb.png)
 
