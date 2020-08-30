@@ -18,13 +18,13 @@
 ## Use BetterDiscord and Spicetify at your own risk, these are violations of their terms of services
 
 
-These dotfiles might work out of a box on Manjaro i3 community edition.
+These dotfiles might work out of a box on Manjaro i3 community edition.  
 Also this is like my home folder so everything I have here is in my home folder
 
 
 ## Programs I use
 
-```BetterDiscord, Spicetify, Xcursor, Nautilus, cava, rofi, Polybar, i3-gaps, i3-scrot, picom-ibhagwan-git, neofetch, code-oss, gtk-3.0, eye of gnome```
+```BetterDiscord, Spicetify, Xcursor, Nautilus, cava, rofi, Polybar, i3-gaps, i3-scrot, picom-ibhagwan-git, neofetch, code-oss, gtk-3.0, eye of gnome```  
 and a lot of others... you can see them in i3 config tho
 
 
@@ -36,16 +36,16 @@ and a lot of others... you can see them in i3 config tho
 
 ## Some additional install steps
 
-If you want the Nautilus theme to be running you will have to build it on your own from folder themes/phocus.
+If you want the Nautilus theme to be running you will have to build it on your own from folder themes/phocus.  
 You have to get the files from [this repo](https://github.com/DarkReaper231/phocus) as I only provided modified build files in this repo. It is a fork as the creator will be doing some edits that will get rid of this black theme.
 
 
 ## Steps you should do after installing
 
-1. Get openwheathermap.org API and modify weather.py in polybar
-2. Also polybar might not work for you out of a box, make sure the screen output is set to your current one
-3. Read through the config files, because something might be different for you
-4. Make sure you have fonts Inconsolata, Dejavu Sans Mono, TerminessTTF Mono, MonacoB
+1. Get openwheathermap.org API and modify weather.py in polybar  
+2. Also polybar might not work for you out of a box, make sure the screen output is set to your current one  
+3. Read through the config files, because something might be different for you  
+4. Make sure you have fonts Inconsolata, Dejavu Sans Mono, TerminessTTF Mono, MonacoB  
 
 
 ## My website repo
