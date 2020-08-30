@@ -42,7 +42,7 @@ You have to get the files from [this repo](https://github.com/phocus) as I only 
 1. Get openwheathermap.org API and modify weather.py in polybar
 2. Also polybar might not work for you out of a box, make sure the screen output is set to your current one
 3. Read through the config files, because something might be different for you
-4. Make sure you have fonts Inconsolata, Dejavu Sans Mono, TerminessTTF Mono
+4. Make sure you have fonts Inconsolata, Dejavu Sans Mono, TerminessTTF Mono, MonacoB
 
 
 ## My website repo
