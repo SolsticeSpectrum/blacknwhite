@@ -9,7 +9,7 @@ import os
 
 def main():
     city = "Jihlava"
-    api_key = "380e4fb797e3c30fb3fabdf4e7fac08d"
+    api_key = "REPLACE_ME"
 
     try:
         data = urllib.parse.urlencode({'q': city, 'appid': api_key, 'units': 'metric'})
