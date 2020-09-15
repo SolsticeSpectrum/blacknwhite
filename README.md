@@ -56,6 +56,6 @@ You have to get the files from [this repo](https://github.com/DarkReaper231/phoc
 
 ## Credits
 
-[Vista1nik](https://www.reddit.com/user/Vista1nik/) - gap spacing and picom config
-[snickerton](https://www.reddit.com/user/snickerton/) - modules of polybar
-[phisch90](https://www.reddit.com/user/phisch90/) - gtk theme called phocus
+[Vista1nik](https://www.reddit.com/user/Vista1nik/) - gap spacing and picom config  
+[snickerton](https://www.reddit.com/user/snickerton/) - modules of polybar  
+[phisch90](https://www.reddit.com/user/phisch90/) - gtk theme called phocus  
