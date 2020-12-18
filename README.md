@@ -41,8 +41,7 @@ and a lot of others... you can see them in i3 config tho
 If you want the Nautilus theme to be running you will have to build it on your own from folder themes/phocus.  
 You have to get the files from [this repo](https://github.com/DarkReaper231/phocus) as I only provided modified build files in this repo. It is a fork as the creator will be doing some edits that will get rid of this black theme.
 
-If you are planning to use the grub theme DO NOT COPY the whole config. The whole config is in my repo just for REFERENCE. Instead copy only the part  
-starting with ```# --> This part creates the grub look and must be recopied into grub.cfg after every grub update``` and ending with ```# End of the grub look <--```
+If you are planning to use the grub theme DO NOT COPY the whole config. The whole config is in my repo just for REFERENCE. Instead copy only the part starting with ```# --> This part creates the grub look and must be recopied into grub.cfg after every grub update``` and ending with ```# End of the grub look <--```
 
 
 ## Steps you should do after installing
