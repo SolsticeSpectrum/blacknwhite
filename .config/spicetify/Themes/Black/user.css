@@ -27,6 +27,10 @@
 	display: none !important;
 }
 
+/*Hide ad banner */
+.ad-container, #view-leaderboard-ad, #view-billboard-ad {
+    display: none !important;
+}
 
 /*Exclude these elements from draggable property because it stops them from clickable*/
 .profile-items-container,
