@@ -21,6 +21,8 @@ bindsym $mod+n border normal
 
 exec --no-startup-id polybar mybar -r
 exec --no-startup-id picom -b -f --respect-prop-shadow
+exec --no-startup-id numlockx
+exec --no-startup-id setxkbmap -layout cz,us -option grp:alt_shift_toggle,grp_led:scroll
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -30,7 +32,8 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminal
+# bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -149,7 +152,8 @@ bindsym $mod+Ctrl+Left workspace prev
 set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:爛"
-set $ws4 "4:"
+# set $ws4 "4:"
+set $ws4 "4:"
 set $ws5 "5:"
 # set $ws6 "6:"
 set $ws6 "6:"
@@ -192,13 +196,16 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # assign [class="nautilus"] $ws3
 # assign [class="Skype"] $ws5
 
+assign [class = "kitty"] $ws1
 assign [class = "URxvt"] $ws1
 assign [class = "firefox"] $ws2
 assign [class = "obs"] $ws7
 for_window [class = "Spotify"] move to workspace $ws3
 assign [class = "code-oss"] $ws8
+assign [class = "code"] $ws8
 assign [class = "Gimp"] $ws5
 assign [class = "Steam"] $ws6
+assign [class="discord" instance="discord"] $ws6
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
