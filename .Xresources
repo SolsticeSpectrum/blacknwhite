@@ -58,7 +58,8 @@ XTerm*selectToClipboard: true
 Xcursor.theme: Simp1e
 Xcursor.size:                     0
 
-URxvt.font: xft:Dejavu Sans Mono:bold:size=11
+! URxvt.font: xft:Dejavu Sans Mono:bold:size=11
+URxvt*font: xft:Dejavu Sans Mono for Powerline:bold:size=11
 ! URxvt.letterSpace: -5
 URxvt.internalBorder: 50
 XTerm.vt100.internalBorder: 50
