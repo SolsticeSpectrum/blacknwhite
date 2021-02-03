@@ -18,9 +18,9 @@
 :root {
    --background-primary: #000000 !important;
    --background-secondary: #000000 !important;
-   --background-secondary-alt: #292929 !important;
+   --background-secondary-alt: #000000 !important;
    --background-tertiary: #000000 !important;
-   --background-accent: #242424 !important;
+   --background-accent: rgba(255, 255, 255, 0.04) !important;
    --background-floating: black !important;
    --background-modifier-hover: rgba(255, 255, 255, 0.01) !important;
    --background-modifier-active: rgba(255, 255, 255, 0.03) !important;
@@ -47,4 +47,42 @@
    --toast-contents: var(--background-secondary) !important;
    --toast-box-shadow: rgba(0, 0, 0, 0.2) !important;
    --toast-border: var(--background-tertiary) !important;
+   --scrollbar-thin-thumb: #ffffff !important;
+   --scrollbar-thin-track: #000000 !important;
+}
+
+.scroller-2LSbBU::-webkit-scrollbar-thumb {
+    background-color: #ffffff !important;
+}
+
+.scroller-2LSbBU::-webkit-scrollbar-track {
+    background-color: #000000 !important;
+}
+
+.peopleList-3c4jOR::-webkit-scrollbar-thumb {
+    background-color: #ffffff !important;
+}
+
+.peopleList-3c4jOR::-webkit-scrollbar-track {
+    background-color: #000000 !important;
+}
+
+.contentRegionScroller-26nc1e::-webkit-scrollbar-thumb {
+    background-color: #ffffff !important;
+}
+
+.contentRegionScroller-26nc1e::-webkit-scrollbar-track {
+    background-color: #000000 !important;
+}
+
+.peopleList-3c4jOR {
+    background: #000000;
+}
+
+.container-3baos1 {
+    background: #000000;
+}
+
+.body-1ld4H7 {
+    background: #000000;
 }
