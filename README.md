@@ -1,20 +1,20 @@
 <h1 align="center">black n white dotfiles</h1>
 
-![img](https://i.imgur.com/8OHY0I7.png)
+![img](https://i.imgur.com/EeF3Ezo.png)
 
-![img](https://i.imgur.com/DNP5nYY.png)
+![img](https://i.imgur.com/BGK3wSG.png)
 
-![img](https://i.imgur.com/YHQAaUU.png)
+![img](https://i.imgur.com/2XibV8I.png)
 
-![img](https://i.imgur.com/rrEkaPo.png)
+![img](https://i.imgur.com/jQKF7rg.png)
 
-![img](https://i.imgur.com/DnhAHJb.png)
+![img](https://i.imgur.com/b6IMN5t.png)
 
-![img](https://i.imgur.com/vqA6Ssy.png)
+![img](https://i.imgur.com/p9rvcU3.png)
 
-![img](https://i.imgur.com/WHGVne3.jpg)
+![img](https://i.imgur.com/Crjt1gJ.png)
 
-![img](https://i.imgur.com/jIdrvrG.png)
+![img](https://i.imgur.com/V72wkYj.png)
 
 
 ## Use BetterDiscord and Spicetify at your own risk, these are violations of their terms of services
@@ -32,8 +32,9 @@ and a lot of others... you can see them in i3 config tho
 
 ## VS Code and IntelliJ themes
 
-[VS Code](https://marketplace.visualstudio.com/items?itemName=viktorqvarfordt.vscode-pitch-black-theme)  
-[IntelliJ Idea](https://plugins.jetbrains.com/plugin/14059-darcula-pitch-black)
+[VS Code Color Theme](https://marketplace.visualstudio.com/items?itemName=Jaakko.black)  
+[VS Code Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)  
+[IntelliJ Idea Theme](https://plugins.jetbrains.com/plugin/14059-darcula-pitch-black)
 
 
 ## Some additional install steps
