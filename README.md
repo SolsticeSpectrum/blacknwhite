@@ -26,7 +26,7 @@ Also this is like my home folder so everything I have here is in my home folder
 
 ## Programs I use
 
-```BetterDiscord, Spicetify, Xcursor, Nautilus, cava, rofi, Polybar, i3-gaps, i3-scrot, picom-git, neofetch, code-oss, gtk-3.0, eye of gnome, tty-clock, powerline```  
+```BetterDiscord, Spicetify, Xcursor, Nautilus, cava, rofi, Polybar, i3-gaps, i3-scrot, picom-git, neofetch, code-oss, gtk-3.0, eye of gnome, tty-clock, powerline, kitty```  
 and a lot of others... you can see them in i3 config tho
 
 
