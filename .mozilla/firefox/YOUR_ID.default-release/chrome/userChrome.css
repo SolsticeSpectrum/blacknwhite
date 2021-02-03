@@ -44,6 +44,26 @@ toolbar {
   color: #000000 !important;
 }
 
+.tab-icon-sound[selected="true"]  {
+  color: #000000 !important;
+}
+
+.findbar-textbox {
+  background: #252527 !important;
+}
+
+.tab-icon-sound[selected="true"]  {
+  color: #000000 !important;
+}
+
+.tab-icon-image[selected="true"]  {
+  color: #000000 !important;
+}
+
+.tab-throbber[selected="true"]  {
+  color: #000000 !important;
+}
+
 #identity-box,
 #tracking-protection-icon-container,
 #urlbar-background{
