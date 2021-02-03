@@ -62,3 +62,4 @@ If you are planning to use the grub theme DO NOT COPY the whole config. The whol
 [Vista1nik](https://www.reddit.com/user/Vista1nik/) - gap spacing and picom config  
 [snickerton](https://www.reddit.com/user/snickerton/) - modules of polybar  
 [phisch90](https://www.reddit.com/user/phisch90/) - gtk theme called phocus  
+[killown](https://github.com/user/killown/) - gtk icons
