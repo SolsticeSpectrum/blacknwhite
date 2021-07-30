@@ -1,6 +1,6 @@
 <h1 align="center">black n white dotfiles</h1>
 
-![img](https://i.imgur.com/rbFwUxl.png)
+![img](https://i.imgur.com/8wVPmmR.png)
 
 ![img](https://i.imgur.com/BGK3wSG.png)
 
