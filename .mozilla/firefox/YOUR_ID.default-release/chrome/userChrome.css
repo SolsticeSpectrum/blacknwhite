@@ -14,7 +14,6 @@ toolbar  {
 
 #urlbar-zoom-button  {
   background-color: #000000 !important;
-  visibility: hidden !important;
 }
 
 ::selection  {
