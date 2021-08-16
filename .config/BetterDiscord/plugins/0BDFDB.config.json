@@ -1,0 +1,22 @@
+{
+	"changeLogs": {
+		"BDFDB": "1.8.2",
+		"NotificationSounds": "3.6.2",
+		"SendLargeMessages": "1.6.8",
+		"ShowBadgesInChat": "1.8.1",
+		"SplitLargeMessages": "1.7.0",
+		"SpotifyControls": "1.2.0"
+	},
+	"choices": {
+		"toastPosition": "right"
+	},
+	"general": {
+		"showToasts": true,
+		"showSupportBadges": true,
+		"useChromium": false
+	},
+	"hashes": {
+		"0BDFDB.data.json": "8db8f4af692361da2324a203eac2e0688af07cee",
+		"0BDFDB.raw.css": "80b6d40ad2af425192bcab890200d7814ea6d9a1"
+	}
+}
