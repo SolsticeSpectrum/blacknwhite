@@ -12,6 +12,21 @@ toolbar {
   border: none !important;
 }
 
+::selection {
+  background-color: #3268ca !important;
+  color: #ffffff !important;
+}
+
+.tab-stack {
+  margin-top: -4px !important;
+  margin-bottom: -2px !important;
+  margin-left: -2px !important;
+}
+
+menupopup {
+  background-color: #181818 !important;
+}
+
 .tab-background[selected="true"] {
   background-color: #ffffff !important;
   -moz-appearance: none !important;
@@ -44,16 +59,18 @@ toolbar {
   color: #000000 !important;
 }
 
-.tab-icon-sound[selected="true"]  {
+.tab-icon-sound-label,
+.tab-icon-sound-playing-label  {
+  visibility: hidden !important;
+  margin-bottom: -100px !important;
+}
+
+.tab-icon-overlay[selected="true"]  {
   color: #000000 !important;
 }
 
 .findbar-textbox {
   background: #252527 !important;
-}
-
-.tab-icon-sound[selected="true"]  {
-  color: #000000 !important;
 }
 
 .tab-icon-image[selected="true"]  {
