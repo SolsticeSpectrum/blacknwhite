@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+body {
+    background-color: #000000;
+}
+
+.info {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-left: 0%;
+    line-height: 0;
+    font-family: 'Roboto Mono', sans-serif;
+}
+#greeting {
+    font-size: 37px;
+    color: #888;
+}
+#time {
+    font-size: 37px;
+    color: #fff;
+}
+
+.list_title
+{
+    font-size: 35px;
+}
+.lists {
+    display: flex;
+    margin-top: 90px;
+    flex-wrap: wrap;
+    vertical-align: center;
+    justify-content: center; 
+    font-family: 'Roboto Mono', sans-serif;
+}
+.watch, .social, .dev, .linux, .other {
+    display: flex;
+    flex-direction: column;
+    background-color: #0c0c0c;
+    border-radius: 30px;
+    margin: 5px;
+    width: 230px;
+    padding: 40px;
+}
+a {
+    transition: color 0.3s ease;
+}
+a:visited, a:link, a:active {
+    color: #fff;;
+    text-decoration: none;
+    font-size: 33px;
+    text-indent: 2px;
+    line-height: 1.6;
+}
+a:hover {
+    color: #888;
+}
+#w,#s,#d,#l,#e
+{
+    color: #888;
+    margin-top: -5px;
+}
+#mode {
+   filter: invert(100%) sepia(0%) saturate(1620%) hue-rotate(8deg) brightness(94%) contrast(88%)
+}
+#mode:hover {
+    filter: invert(56%) sepia(45%) saturate(6917%) hue-rotate(173deg) brightness(96%) contrast(82%) !important
+}
