@@ -41,5 +41,9 @@
   .click-target-container *, .top-sites-list * {
   text-shadow: 0px 0px 0px #000 !important
   }
+    
+  .outer-wrapper.newtab-experience:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+  background: #000000 !important;
+  }
 
 }
