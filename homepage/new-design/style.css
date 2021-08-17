@@ -10,24 +10,25 @@ body {
     flex-direction: column;
     margin-left: 0%;
     line-height: 0;
+    margin-top: -25px;
     font-family: 'Roboto Mono', sans-serif;
 }
 #greeting {
-    font-size: 37px;
+    font-size: 18px;
     color: #888;
 }
 #time {
-    font-size: 37px;
+    font-size: 19px;
     color: #fff;
 }
 
 .list_title
 {
-    font-size: 35px;
+    font-size: 18px;
 }
 .lists {
     display: flex;
-    margin-top: 90px;
+    margin-top: 50px;
     flex-wrap: wrap;
     vertical-align: center;
     justify-content: center; 
@@ -37,10 +38,11 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #0c0c0c;
-    border-radius: 30px;
-    margin: 5px;
-    width: 230px;
-    padding: 40px;
+    border-radius: 15px;
+    margin: 2px;
+    width: 115px;
+    padding: 20px;
+    padding-top: 23px;
 }
 a {
     transition: color 0.3s ease;
@@ -48,7 +50,7 @@ a {
 a:visited, a:link, a:active {
     color: #fff;;
     text-decoration: none;
-    font-size: 33px;
+    font-size: 16px;
     text-indent: 2px;
     line-height: 1.6;
 }
