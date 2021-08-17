@@ -1,20 +1,20 @@
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
-    .click-target-container *, .top-sites-list * {
-        color: #fff !important ;
-        text-shadow: 2px 2px 2px #222 !important ;
-    }
+  .click-target-container *, .top-sites-list * {
+    color: #fff !important ;
+    text-shadow: 2px 2px 2px #222 !important ;
+  }
 
-    body::before {
-        content: "" ;
-        z-index: -1 ;
-        position: fixed ;
-        top: 0 ;
-        left: 0 ;
-        background: #000000 ;
-        background-size: cover ;
-        width: 100vw ;
-        height: 100vh ;
-    }
+  body::before {
+    content: "" ;
+    z-index: -1 ;
+    position: fixed ;
+    top: 0 ;
+    left: 0 ;
+    background: #000000 ;
+    background-size: cover ;
+    width: 100vw ;
+    height: 100vh ;
+  }
 }
 
 ::selection {
@@ -22,31 +22,31 @@
   color: #ffffff !important;
 }
 
-@-moz-document url(about:newtab) {
+@-moz-document url(about:newtab)  {
   .outer-wrapper.newtab-experience .search-wrapper .search-handoff-button, .outer-wrapper.newtab-experience .search-wrapper input {
     background: #0c0c0c var(--newtab-search-icon) 16px center no-repeat !important;
     color: #888 !important;
     box-shadow: 0 0px 0px #000, 0 0 0px #000 !important;
   }
 
-  .outer-wrapper.newtab-experience .top-site-outer .tile {
-  background-color: #0c0c0c !important;
-  box-shadow: 0 0px 0px #000, 0 0 0px #000 !important;
+  .outer-wrapper.newtab-experience .top-site-outer .tile  {
+    background-color: #0c0c0c !important;
+    box-shadow: 0 0px 0px #000, 0 0 0px #000 !important;
   }
 
-  .top-site-outer .top-site-icon {
-  background-color: #0c0c0c !important;
+  .top-site-outer .top-site-icon  {
+    background-color: #0c0c0c !important;
   }
 
-  .click-target-container *, .top-sites-list * {
-  text-shadow: 0px 0px 0px #000 !important
+  .click-target-container *, .top-sites-list *  {
+    text-shadow: 0px 0px 0px #000 !important
   }
     
-  .outer-wrapper.newtab-experience:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
-  background: #000000 !important;
+  .outer-wrapper.newtab-experience:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover)  {
+    background: #000000 !important;
   }
 
-  .outer-wrapper.newtab-experience .search-wrapper.fake-focus:not(.search.disabled) .search-handoff-button {
-  border: 1px solid #fff !important;
+  .outer-wrapper.newtab-experience .search-wrapper.fake-focus:not(.search.disabled) .search-handoff-button  {
+    border: 1px solid #fff !important;
   }
 }
