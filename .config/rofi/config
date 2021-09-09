@@ -49,161 +49,161 @@ element {
 }
 
 element normal.normal {
-    background-color: var(normal-background);
-    text-color:       var(normal-foreground);
+    background-color:            var(normal-background);
+    text-color:                  var(normal-foreground);
 }
 
 element normal.urgent {
-    background-color: var(urgent-background);
-    text-color:       var(urgent-foreground);
+    background-color:            var(urgent-background);
+    text-color:                  var(urgent-foreground);
 }
 
 element normal.active {
-    background-color: var(active-background);
-    text-color:       var(active-foreground);
+    background-color:            var(active-background);
+    text-color:                  var(active-foreground);
 }
 
 element selected.normal {
-    background-color: var(selected-normal-background);
-    text-color:       var(selected-normal-foreground);
+    background-color:            var(selected-normal-background);
+    text-color:                  var(selected-normal-foreground);
 }
 
 element selected.urgent {
-    background-color: var(selected-urgent-background);
-    text-color:       var(selected-urgent-foreground);
+    background-color:            var(selected-urgent-background);
+    text-color:                  var(selected-urgent-foreground);
 }
 
 element selected.active {
-    background-color: var(selected-active-background);
-    text-color:       var(selected-active-foreground);
+    background-color:            var(selected-active-background);
+    text-color:                  var(selected-active-foreground);
 }
 
 element alternate.normal {
-    background-color: var(alternate-normal-background);
-    text-color:       var(alternate-normal-foreground);
+    background-color:            var(alternate-normal-background);
+    text-color:                  var(alternate-normal-foreground);
 }
 
 element alternate.urgent {
-    background-color: var(alternate-urgent-background);
-    text-color:       var(alternate-urgent-foreground);
+    background-color:            var(alternate-urgent-background);
+    text-color:                  var(alternate-urgent-foreground);
 }
 
 element alternate.active {
-    background-color: var(alternate-active-background);
-    text-color:       var(alternate-active-foreground);
+    background-color:            var(alternate-active-background);
+    text-color:                  var(alternate-active-foreground);
 }
 
 element-text {
     background-color: rgba ( 0, 0, 0, 0 % );
-    highlight:        inherit;
-    text-color:       inherit;
+    highlight:                   inherit;
+    text-color:                  inherit;
 }
 
 element-icon {
     background-color: rgba ( 0, 0, 0, 0 % );
-    size:             1.0000em ;
-    text-color:       inherit;
+    size:                        1.0000em ;
+    text-color:                  inherit;
 }
 
 window {
-    padding:          400 400 350 400;
-    background-color: var(background);
-    border:           1;
-    fullscreen:       true;
-    width:            100%;
+    padding:                     400 400 350 400;
+    background-color:            var(background);
+    border:                      1;
+    fullscreen:                  true;
+    width:                       100%;
 }
 
 mainbox {
-    padding: 0;
-    border:  0;
+    padding:                     0;
+    border:                      0;
 }
 
 message {
-    padding:      1px ;
-    border-color: var(separatorcolor);
-    border:       2px dash 0px 0px ;
+    padding:                     1px ;
+    border-color:                var(separatorcolor);
+    border:                      2px dash 0px 0px ;
 }
 
 textbox {
-    text-color: var(foreground);
+    text-color:                  var(foreground);
 }
 
 listview {
-    padding:      2px 0px 0px ;
-    scrollbar:    false;
-    border-color: var(separatorcolor);
-    spacing:      2px ;
-    fixed-height: 0;
-    border:       2px solid 0px 0px ;
-    lines:        5;
+    padding:                     2px 0px 0px ;
+    scrollbar:                   false;
+    border-color:                var(separatorcolor);
+    spacing:                     2px ;
+    fixed-height:                0;
+    border:                      2px solid 0px 0px ;
+    lines:                       5;
 }
 
 scrollbar {
-    width:        4px ;
-    padding:      0;
-    handle-width: 8px ;
-    border:       0;
-    handle-color: var(normal-foreground);
+    width:                       4px ;
+    padding:                     0;
+    handle-width:                8px ;
+    border:                      0;
+    handle-color:                var(normal-foreground);
 }
 
 sidebar {
-    border-color: var(separatorcolor);
-    border:       2px dash 0px 0px ;
+    border-color:                var(separatorcolor);
+    border:                      2px dash 0px 0px ;
 }
 
 button {
-    spacing:    0;
-    text-color: var(normal-foreground);
+    spacing:                     0;
+    text-color:                  var(normal-foreground);
 }
 
 button selected {
-    background-color: var(selected-normal-background);
-    text-color:       var(selected-normal-foreground);
+    background-color:            var(selected-normal-background);
+    text-color:                  var(selected-normal-foreground);
 }
 
 num-filtered-rows {
-    expand:     false;
-    text-color: rgba ( 128, 128, 128, 100 % );
+    expand:                      false;
+    text-color:                  rgba ( 128, 128, 128, 100 % );
 }
 
 num-rows {
-    expand:     false;
-    text-color: rgba ( 128, 128, 128, 100 % );
+    expand:                      false;
+    text-color:                  rgba ( 128, 128, 128, 100 % );
 }
 
 textbox-num-sep {
-    expand:     false;
-    str:        "/";
-    text-color: rgba ( 128, 128, 128, 100 % );
+    expand:                      false;
+    str:                         "/";
+    text-color:                  rgba ( 128, 128, 128, 100 % );
 }
 
 inputbar {
-    padding:    1px ;
-    spacing:    0px ;
-    text-color: var(normal-foreground);
-    children:   [ prompt,textbox-prompt-colon,entry,num-filtered-rows,textbox-num-sep,num-rows,case-indicator ];
+    padding:                     1px ;
+    spacing:                     0px ;
+    text-color:                  var(normal-foreground);
+    children:                    [ prompt,textbox-prompt-colon,entry,num-filtered-rows,textbox-num-sep,num-rows,case-indicator ];
 }
 
 case-indicator {
-    spacing:    0;
-    text-color: var(normal-foreground);
+    spacing:                     0;
+    text-color:                  var(normal-foreground);
 }
 
 entry {
-    text-color:        var(normal-foreground);
-    spacing:           0;
-    placeholder-color: rgba ( 128, 128, 128, 100 % );
-    placeholder:       "Type to filter";
+    text-color:                  var(normal-foreground);
+    spacing:                     0;
+    placeholder-color:           rgba ( 128, 128, 128, 100 % );
+    placeholder:                 "Type to filter";
 }
 
 prompt {
-    spacing:    0;
-    text-color: var(normal-foreground);
+    spacing:                     0;
+    text-color:                  var(normal-foreground);
 }
 
 textbox-prompt-colon {
-    margin:     0px 0.3000em 0.0000em 0.0000em ;
-    expand:     false;
-    str:        ":";
-    text-color: inherit;
+    margin:                      0px 0.3000em 0.0000em 0.0000em ;
+    expand:                      false;
+    str:                         ":";
+    text-color:                  inherit;
 }
