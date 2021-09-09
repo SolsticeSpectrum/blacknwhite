@@ -106,7 +106,7 @@ element-icon {
 }
 
 window {
-    padding:          400 400 300 400;
+    padding:          400 400 350 400;
     background-color: var(background);
     border:           1;
     fullscreen:       true;
@@ -134,7 +134,7 @@ listview {
     border-color: var(separatorcolor);
     spacing:      2px ;
     fixed-height: 0;
-    border:       2px dash 0px 0px ;
+    border:       2px solid 0px 0px ;
     lines:        5;
 }
 
