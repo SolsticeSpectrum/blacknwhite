@@ -42,7 +42,11 @@ and a lot of others... you can see them in i3 config tho
 If you want the Nautilus theme to be running you will have to build it on your own from folder themes/phocus.  
 You have to get the files from [this repo](https://github.com/DarkReaper231/phocus) as I only provided modified build files in this repo. It is a fork as the creator will be doing some edits that will get rid of this black theme.
 
-If you are planning to use the grub theme DO NOT COPY the whole config. The whole config is in my repo just for REFERENCE. Instead copy only the part starting with ```# --> This part creates the grub look and must be recopied into grub.cfg after every grub update``` and ending with ```# End of the grub look <--```
+To use the grub theme move the folder sleek to /usr/share/grub/themes  
+Open file /etc/default/grub with your preferred text editor and find the line `#GRUB_THEME=""` uncomment it and add `/usr/share/grub/themes/sleek/theme.txt`  
+into the quotation marks  
+Final result should look like this `GRUB_THEME="/usr/share/grub/themes/sleek/theme.txt"`  
+Save the file and run command `sudo grub-mkconfig -o /boot/grub/grub.cfg`  
 
 
 ## Steps you should do after installing
