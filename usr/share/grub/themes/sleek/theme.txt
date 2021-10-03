@@ -9,43 +9,35 @@ terminal-width: "100%"
 terminal-height: "100%"
 terminal-border: "0"
 
-+label{
++label {
 text="Hello, welcome to Grub"
 font = "Poppins Regular 48"
 color="#000000"
-left = 50%-200
+left = 25%
 top = 15%
 height = 20
-width = 400      
+width = 50%
 align = "center"
-
-
-
 }
 
-+label{
++label {
 text="choose your operating system"
 font = "Poppins Regular 16"
 color="#757575"
 top=30%-30
-left = 50%-80
+left = 25%
 align = "center"
-width=160
+width=50%
 height= 40
-
-
 }
-
-
-
-
-
 
 + boot_menu {
   left = 25%
   width = 50%
   top = 30%
   height = 40%
+  icon_width = 16
+  icon_height = 16
   item_height = 48
   item_padding = 8
   item_spacing = 8
@@ -78,5 +70,3 @@ height= 40
 		height = 42
 		file = "menu.png"
 }
-
-
