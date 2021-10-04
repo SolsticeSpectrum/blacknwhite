@@ -3,7 +3,7 @@
 ; If unspecified, the application will pick the first one it finds.
 ; $ polybar -m | cut -d ':' -f 1
 ; $ xrandr -q | grep " connected" | cut -d ' ' -f1
-monitor = HDMI-1
+; monitor = HDMI-2
 
 ; Use the specified monitor as a fallback if the main one is not found.
 ; monitor-fallback =
@@ -105,7 +105,7 @@ font-1 = TerminessTTF Nerd Font Mono:size=16;2
 ;   modules-right = ipc clock
 modules-left = i3 previous playpause next spotify
 modules-center = date sep weather
-modules-right = temperature sep memory sep cpu sep volume sep powermenu
+modules-right = temperature sep memory sep cpu sep volume sep xkeyboard sep powermenu
 
 ; The separator will be inserted between the output of each module
 separator =
@@ -532,6 +532,18 @@ label-warn = " %temperature-c% "
 
 label-foreground = #FFFFFF
 label-warn-foreground = #FFFFFF
+
+[module/xkeyboard]
+type = internal/xkeyboard
+
+blacklist-0 = num lock
+blacklist-1 = caps lock
+
+format-prefix = "  "
+format-prefix-foreground = #FFF
+
+label-layout = %layout%
+label-layout-foreground = #FFF
 
 [module/decor-glyph]
 type = custom/text
