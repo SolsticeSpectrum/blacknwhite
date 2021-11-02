@@ -2,7 +2,7 @@
  * @name SpotifyControls
  * @author DevilBro
  * @authorId 278543574059057154
- * @version 1.2.0
+ * @version 1.2.4
  * @description Adds a Control Panel while listening to Spotify on a connected Account
  * @invite Jx3TjNS
  * @donate https://www.paypal.me/MircoWittrien
@@ -17,17 +17,17 @@ module.exports = (_ => {
 		"info": {
 			"name": "SpotifyControls",
 			"author": "DevilBro",
-			"version": "1.2.0",
+			"version": "1.2.4",
 			"description": "Adds a Control Panel while listening to Spotify on a connected Account"
 		},
 		"changeLog": {
-			"improved": {
-				"CSS Variable": "Added CSS variable for the spotify green"
+			"fixed": {
+				"Previous": "Double click to previous work again"
 			}
 		}
 	};
 
-	return (window.Lightcord && !Node.prototype.isPrototypeOf(window.Lightcord) || window.LightCord && !Node.prototype.isPrototypeOf(window.LightCord)) ? class {
+	return (window.Lightcord && !Node.prototype.isPrototypeOf(window.Lightcord) || window.LightCord && !Node.prototype.isPrototypeOf(window.LightCord) || window.Astra && !Node.prototype.isPrototypeOf(window.Astra)) ? class {
 		getName () {return config.info.name;}
 		getAuthor () {return config.info.author;}
 		getVersion () {return config.info.version;}
@@ -144,9 +144,9 @@ module.exports = (_ => {
 				}
 				if (!lastSong) return null;
 				
-				let playerSize = this.props.maximized ? "big" : "small";
 				let coverSrc = BDFDB.LibraryModules.AssetUtils.getAssetImage(lastSong.application_id, lastSong.assets.large_image);
-				showActivity = showActivity != undefined ? showActivity : (BDFDB.LibraryModules.ConnectionStore.getAccounts().find(n => n.type == "spotify") || {}).show_activity;
+				let connection = (BDFDB.LibraryModules.ConnectionStore.getAccounts().find(n => n.type == "spotify") || {});
+				showActivity = showActivity != undefined ? showActivity : (connection.show_activity || connection.showActivity);
 				currentVolume = this.props.draggingVolume ? currentVolume : socketDevice.device.volume_percent;
 				return BDFDB.ReactUtils.createElement("div", {
 					className: BDFDB.DOMUtils.formatClassName(BDFDB.disCN._spotifycontrolscontainer, this.props.maximized && BDFDB.disCN._spotifycontrolscontainermaximized, this.props.timeline && BDFDB.disCN._spotifycontrolscontainerwithtimeline),
@@ -224,7 +224,7 @@ module.exports = (_ => {
 										children: [
 											BDFDB.ReactUtils.createElement(SpotifyControlsButtonComponent, {
 												type: "share",
-												playerSize: playerSize,
+												player: this,
 												style: this.props.maximized ? {marginRight: 4} : {},
 												onClick: _ => {
 													let url = BDFDB.ObjectUtils.get(playbackState, "item.external_urls.spotify") || BDFDB.ObjectUtils.get(playbackState, "context.external_urls.spotify");
@@ -237,7 +237,7 @@ module.exports = (_ => {
 											}),
 											BDFDB.ReactUtils.createElement(SpotifyControlsButtonComponent, {
 												type: "shuffle",
-												playerSize: playerSize,
+												player: this,
 												active: playbackState.shuffle_state,
 												disabled: socketDevice.device.is_restricted,
 												onClick: _ => {
@@ -250,11 +250,12 @@ module.exports = (_ => {
 											}),
 											BDFDB.ReactUtils.createElement(SpotifyControlsButtonComponent, {
 												type: "previous",
-												playerSize: playerSize,
+												player: this,
 												disabled: socketDevice.device.is_restricted,
 												onClick: _ => {
 													if (previousIsClicked || !_this.settings.general.doubleBack) {
 														previousIsClicked = false;
+														BDFDB.TimeUtils.clear(previousDoubleTimeout);
 														this.request(socketDevice.socket, socketDevice.device, "previous");
 													}
 													else {
@@ -270,7 +271,7 @@ module.exports = (_ => {
 											}),
 											BDFDB.ReactUtils.createElement(SpotifyControlsButtonComponent, {
 												type: "pauseplay",
-												playerSize: playerSize,
+												player: this,
 												icon: this.props.song ? 0 : 1,
 												disabled: socketDevice.device.is_restricted,
 												onClick: _ => {
@@ -286,7 +287,7 @@ module.exports = (_ => {
 											}),
 											BDFDB.ReactUtils.createElement(SpotifyControlsButtonComponent, {
 												type: "next",
-												playerSize: playerSize,
+												player: this,
 												disabled: socketDevice.device.is_restricted,
 												onClick: _ => {
 													this.request(socketDevice.socket, socketDevice.device, "next");
@@ -294,7 +295,7 @@ module.exports = (_ => {
 											}),
 											BDFDB.ReactUtils.createElement(SpotifyControlsButtonComponent, {
 												type: "repeat",
-												playerSize: playerSize,
+												player: this,
 												icon: playbackState.repeat_state != repeatStates[2] ? 0 : 1,
 												active: playbackState.repeat_state != repeatStates[0],
 												disabled: socketDevice.device.is_restricted,
@@ -308,7 +309,7 @@ module.exports = (_ => {
 											}),
 											BDFDB.ReactUtils.createElement(SpotifyControlsButtonComponent, {
 												type: "volume",
-												playerSize: playerSize,
+												player: this,
 												icon: Math.ceil(currentVolume/34),
 												disabled: socketDevice.device.is_restricted,
 												style: this.props.maximized ? {marginLeft: 4} : {},
@@ -369,7 +370,8 @@ module.exports = (_ => {
 		};
 		const SpotifyControlsButtonComponent = class SpotifyControlsButton extends BdApi.React.Component {
 			render() {
-				if (!this.props.playerSize || !_this.settings.buttons[this.props.type] || !_this.settings.buttons[this.props.type][this.props.playerSize]) return null;
+				let playerSize = this.props.player.props.maximized ? "big" : "small";
+				if (!playerSize || !_this.settings.buttons[this.props.type] || !_this.settings.buttons[this.props.type][playerSize]) return null;
 				let button = BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.Button, BDFDB.ObjectUtils.exclude(Object.assign({}, this.props, {
 					className: BDFDB.DOMUtils.formatClassName(BDFDB.disCN.accountinfobutton, this.props.disabled ? BDFDB.disCN.accountinfobuttondisabled : BDFDB.disCN.accountinfobuttonenabled, this.props.active && BDFDB.disCN._spotifycontrolsbuttonactive),
 					look: BDFDB.LibraryComponents.Button.Looks.BLANK,
@@ -377,14 +379,16 @@ module.exports = (_ => {
 					children: _this.defaults.buttons[this.props.type] && _this.defaults.buttons[this.props.type].icons ? (_this.defaults.buttons[this.props.type].icons[this.props.icon] || _this.defaults.buttons[this.props.type].icons[0]) : "?",
 					onClick: this.props.disabled ? _ => {} : this.props.onClick,
 					onContextMenu: this.props.disabled ? _ => {} : this.props.onContextMenu,
-				}), "active", "disabled", "renderPopout", "icon", "type", "playerSize"));
+				}), "active", "disabled", "renderPopout", "icon", "type"));
 				return !this.props.disabled && typeof this.props.renderPopout == "function" ? BDFDB.ReactUtils.createElement(BDFDB.LibraryComponents.PopoutContainer, {
 					children: button,
 					animation: BDFDB.LibraryComponents.PopoutContainer.Animation.SCALE,
 					position: BDFDB.LibraryComponents.PopoutContainer.Positions.TOP,
 					align: BDFDB.LibraryComponents.PopoutContainer.Align.CENTER,
 					arrow: true,
-					shadow: true,
+					open: this.props.player.props.buttonStates.indexOf(this.props.type) > -1,
+					onOpen: _ => this.props.player.props.buttonStates.push(this.props.type),
+					onClose: _ => BDFDB.ArrayUtils.remove(this.props.player.props.buttonStates, this.props.type, true),
 					renderPopout: this.props.renderPopout
 				}) : button;
 	}
@@ -488,6 +492,10 @@ module.exports = (_ => {
 					:root {
 						--SC-spotify-green: ${BDFDB.DiscordConstants.Colors.SPOTIFY};
 					}
+					${BDFDB.dotCN.channelpanels} {
+	display: flex;
+	flex-direction: column;
+					}
 					${BDFDB.dotCN._spotifycontrolscontainer} {
 						display: flex;
 						flex-direction: column;
@@ -497,6 +505,7 @@ module.exports = (_ => {
 						border-bottom: 1px solid var(--background-modifier-accent);
 						padding: 0 8px;
 						box-sizing: border-box;
+						order: -1;
 					}
 					${BDFDB.dotCN._spotifycontrolscontainer + BDFDB.dotCN._spotifycontrolscontainerwithtimeline} {
 						padding-top: 8px;
@@ -798,6 +807,7 @@ module.exports = (_ => {
 						key: "SPOTIFY_CONTROLS",
 						song: BDFDB.LibraryModules.SpotifyTrackUtils.getActivity(false),
 						maximized: BDFDB.DataUtils.load(this, "playerState", "maximized"),
+						buttonStates: [],
 						timeline: this.settings.general.addTimeline,
 						activityToggle: this.settings.general.addActivityButton
 					}, true),

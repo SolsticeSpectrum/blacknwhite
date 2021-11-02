@@ -1,6 +1,6 @@
 /**
  * @name ZeresPluginLibrary
- * @version 1.2.31
+ * @version 1.2.33
  * @invite TyFxKer
  * @authorLink https://twitter.com/ZackRauen
  * @donate https://paypal.me/ZackRauen
@@ -137,18 +137,17 @@ module.exports = {
             github_username: "rauenzi",
             twitter_username: "IAmZerebos"
         }],
-        version: "1.2.31",
+        version: "1.2.33",
         description: "Gives other plugins utility functions and the ability to emulate v2.",
         github: "https://github.com/rauenzi/BDPluginLibrary",
         github_raw: "https://raw.githubusercontent.com/rauenzi/BDPluginLibrary/master/release/0PluginLibrary.plugin.js"
     },
     changelog: [
         {
-            title: "Fixed Plugin Updates",
+            title: "Fixed Canary",
             type: "fixed",
             items: [
-                "Fixed plugin updates to stop them crashing Discord.",
-                "Fixed confirmation modal button color."
+                "Hotfix for Canary changes"
             ]
         }
     ],
@@ -528,7 +527,8 @@ __webpack_require__.r(__webpack_exports__);
     get PopoutRoles() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("roleCircle");},
     get UserModal() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("profileBadge");},
     get Textarea() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("channelTextArea", "textArea");},
-    get Popouts() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("popouts", "popout");},
+    get Popouts() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("popouts", "popout");}, // broken, popouts element has been removed.
+    get App() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("app", "mobileApp");},
     get Titles() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("defaultMarginh5");},
     get Notices() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("notice", "colorInfo");},
     get Backdrop() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("backdrop");},
@@ -619,7 +619,7 @@ __webpack_require__.r(__webpack_exports__);
     get MentionStore() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("getMentions");},
 
     /* User Stores and Utils */
-    get UserStore() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("getCurrentUser");},
+    get UserStore() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("getCurrentUser", "getUser");},
     get UserStatusStore() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("getStatus", "getState");},
     get UserTypingStore() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("isTyping");},
     get UserActivityStore() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("getActivity");},
@@ -652,7 +652,7 @@ __webpack_require__.r(__webpack_exports__);
 
     /* Discord Messages */
     get MessageStore() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("getMessages");},
-    get ReactionsStore() {return  _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("getReactions", "_dispatcher");},
+    get ReactionsStore() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("getReactions", "_dispatcher");},
     get MessageActions() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("jumpToMessage", "_sendMessage");},
     get MessageQueue() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("enqueue");},
     get MessageParser() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getModule(m => Object.keys(m).length && Object.keys(m).every(k => k === "parse" || k === "unparse"));},
@@ -721,7 +721,7 @@ __webpack_require__.r(__webpack_exports__);
     get Timestamps() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("fromTimestamp");},
 
     /* Strings and Utils */
-    get Strings() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("Messages").Messages;},
+    get Strings() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getModule(m => m.Messages && Object.keys(m.Messages).length);},
     get StringFormats() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("a", "z");},
     get StringUtils() {return _webpackmodules__WEBPACK_IMPORTED_MODULE_1__["default"].getByProps("toASCII");},
 
@@ -6862,7 +6862,7 @@ class Menu {
                 elementToAdd = submenu;
             }
             layer.append(elementToAdd);
-            layer.appendTo(_modules_discordselectors__WEBPACK_IMPORTED_MODULE_1__["default"].Popouts.popouts.sibling(_modules_discordselectors__WEBPACK_IMPORTED_MODULE_1__["default"].TooltipLayers.layerContainer).toString());
+            layer.appendTo(_modules_discordselectors__WEBPACK_IMPORTED_MODULE_1__["default"].App.app.sibling(_modules_discordselectors__WEBPACK_IMPORTED_MODULE_1__["default"].TooltipLayers.layerContainer).toString());
         // }
         this.element.css("top", mouseY + "px").css("left", mouseX + "px");
 
@@ -7610,7 +7610,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const React = modules__WEBPACK_IMPORTED_MODULE_0__["DiscordModules"].React;
 const ce = React.createElement;
-const Markdown = modules__WEBPACK_IMPORTED_MODULE_0__["WebpackModules"].getByDisplayName("Markdown");
+const Markdown = modules__WEBPACK_IMPORTED_MODULE_0__["WebpackModules"].getModule(m => m.displayName == "Markdown" && m.rules);
 
 class Modals {
 
@@ -8891,7 +8891,7 @@ class Tooltip {
     static create(node, text, options = {}) {return new Tooltip(node, text, options);}
 
     /** Container where the tooltip will be appended. */
-    get container() {return document.querySelector(modules__WEBPACK_IMPORTED_MODULE_0__["DiscordSelectors"].Popouts.popouts.sibling(modules__WEBPACK_IMPORTED_MODULE_0__["DiscordSelectors"].TooltipLayers.layerContainer));}
+    get container() {return document.querySelector(modules__WEBPACK_IMPORTED_MODULE_0__["DiscordSelectors"].App.app.sibling(modules__WEBPACK_IMPORTED_MODULE_0__["DiscordSelectors"].TooltipLayers.layerContainer));}
     /** Boolean representing if the tooltip will fit on screen above the element */
     get canShowAbove() {return this.node.getBoundingClientRect().top - this.element.offsetHeight >= 0;}
     /** Boolean representing if the tooltip will fit on screen below the element */
