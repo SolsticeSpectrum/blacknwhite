@@ -22,7 +22,7 @@ bindsym $mod+n border normal
 exec --no-startup-id polybar mybar -r
 exec --no-startup-id picom -b -f --respect-prop-shadow
 exec --no-startup-id numlockx
-exec --no-startup-id setxkbmap -layout cz,us -option grp:alt_shift_toggle,grp_led:scroll
+exec --no-startup-id setxkbmap -layout cz,us -option grp:alt_shift_toggle
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
