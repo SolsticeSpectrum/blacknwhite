@@ -1,0 +1,140 @@
+window,
+#main-window,
+#toolbar-menubar,
+#TabsToolbar,
+#PersonalToolbar,
+#navigator-toolbox,
+#sidebar-box,
+toolbar  {
+  background-color: #000000 !important;
+  -moz-appearance: none !important;
+  background-image: none !important;
+  border: none !important;
+}
+
+#urlbar-zoom-button  {
+  background-color: #000000 !important;
+}
+
+::selection  {
+  background-color: #3268ca !important;
+  color: #ffffff !important;
+}
+
+.tab-stack  {
+  margin-top: -4px !important;
+  margin-bottom: -2px !important;
+  margin-left: -2px !important;
+}
+
+menupopup  {
+  background-color: #181818 !important;
+}
+
+.tab-background[selected="true"]  {
+  background-color: #ffffff !important;
+  -moz-appearance: none !important;
+  background-image: none !important;
+  border: none !important;
+}
+
+.tab-background  {
+  border-radius: 14px !important;
+}
+
+.tab-text[selected="true"]  {
+  color: #000000 !important;
+}
+
+.tab-line  {
+  display: none !important;
+}
+
+.tabbrowser-tab::before, 
+.tabbrowser-tab::after{
+  display: none !important;
+}
+
+.tab-close-button  {
+  border-radius: 10px !important;
+}
+
+.tab-close-button[selected="true"]  {
+  color: #000000 !important;
+}
+
+.tab-icon-sound-label,
+.tab-icon-sound-playing-label  {
+  visibility: hidden !important;
+  margin-bottom: -100px !important;
+}
+
+.tab-icon-overlay[selected="true"]  {
+  color: #000000 !important;
+}
+
+.findbar-textbox {
+  background: #252527 !important;
+}
+
+.tab-icon-image[selected="true"]  {
+  color: #000000 !important;
+}
+
+.tab-throbber[selected="true"]  {
+  color: #000000 !important;
+}
+
+#identity-box,
+#tracking-protection-icon-container,
+#urlbar-background  {
+  display: none !important;
+}
+
+#whats-new-menu-button,
+#star-button,
+#pocket-button,
+#pageActionSeparator,
+#pageActionButton,
+#reader-mode-button  {
+  display: none !important;
+}
+
+#PanelUI-button  {
+  border-image-slice: 0 !important;
+}
+
+#urlbar-results  {
+  background-color: #000000 !important;
+  border-radius: 10px !important;
+}
+
+.urlbarView-body-inner  {
+  border-top: none !important;
+}
+
+.urlbarView-row[selected] .urlbarView-title{
+  color: #000000;
+}
+
+#nav-bar  {
+  border-bottom: 0px !important;
+  box-shadow: none !important;
+}
+
+#urlbar ::-moz-selection,
+.searchbar-textbox ::-moz-selection  {
+  background-color: #ffffff !important;
+  color: #000 !important;
+}
+
+window,
+#main-window  {
+  font-family: "Dejavu Sans Mono" !important;
+  font-size: 12px !important;
+  color: #ffffff !important;
+}
+
+#tabbrowser-tabpanels  {
+  background-color: #ffffff !important;
+}
