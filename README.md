@@ -1,20 +1,22 @@
 <h1 align="center">black n white dotfiles</h1>
 
-![img](https://i.imgur.com/d36Ktiz.png)
+![img](https://i.imgur.com/lcMb4JA.png)
 
-![img](https://i.imgur.com/BGK3wSG.png)
+![img](https://i.imgur.com/kti5PgH.png)
 
-![img](https://i.imgur.com/2XibV8I.png)
+![img](https://i.imgur.com/y6jb0UJ.png)
 
-![img](https://i.imgur.com/J58hxmf.png)
+![img](https://i.imgur.com/U2ea0Tl.png)
 
 ![img](https://i.imgur.com/b6IMN5t.png)
 
-![img](https://i.imgur.com/LRp1IJe.png)
+![img](https://i.imgur.com/Xl6ST3i.png)
 
-![img](https://i.imgur.com/Crjt1gJ.png)
+![img](https://i.imgur.com/wuxZZ8i.png)
 
-![img](https://i.imgur.com/V72wkYj.png)
+![img](https://i.imgur.com/lcK5Kla.png)
+
+![img](https://i.imgur.com/XYasCse.png)
 
 ![img](https://i.imgur.com/NzsTPeP.png)
 
