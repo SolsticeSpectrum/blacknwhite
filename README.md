@@ -61,10 +61,6 @@ Save the file and run command `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 4. Make sure you have fonts Inconsolata, Dejavu Sans Mono, TerminessTTF Mono, MonacoB  
 
 
-## My website repo
-
-[Here](https://github.com/DarkReaper231/webdevprojects)
-
 ## Credits
 
 [Vista1nik](https://www.reddit.com/user/Vista1nik/) - gap spacing and picom config  
