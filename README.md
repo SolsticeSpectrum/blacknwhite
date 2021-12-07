@@ -67,3 +67,4 @@ Save the file and run command `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 [snickerton](https://www.reddit.com/user/snickerton/) - modules of polybar  
 [phisch90](https://www.reddit.com/user/phisch90/) - gtk theme called phocus  
 [killown](https://github.com/user/killown/) - gtk icons
+[grtcdr](https://github.com/grtcdr/startpages) - homepage
